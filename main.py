@@ -3,6 +3,12 @@ import threading
 import random
 import time
 import sys
+import signal
+
+def sigint_handler(signum, frame):
+    res = input("Ctrl-c was pressed. Do you really want to exit? y/n ")
+    if res == 'y':
+        exit(1)
 
 def attack(target):
     count = 0
@@ -31,6 +37,7 @@ def attack(target):
             raise e
         
 def main():
+    signal.signal(signal.SIGINT, sigint_handler)
     print("""   ______  __                       _        __                
  .' ___  |[  |                     (_)      |  ]               
 / .'   \_| | |--.   ,--.   _ .--.  __   .--.| |  .--.   .--.   
