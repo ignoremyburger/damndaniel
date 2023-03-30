@@ -44,7 +44,7 @@ def main():
     print("[!] Program is starting in 5 seconds.")
     print("[!] To cancel: press Ctrl + C")
     time.sleep(5)
-    for i in range(threads):
+    for i in range(int(threads)):
         thread = threading.Thread(target=attack(target=target))
         thread.start()
 
