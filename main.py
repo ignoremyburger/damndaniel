@@ -38,14 +38,7 @@ def attack(target):
         
 def main():
     signal.signal(signal.SIGINT, sigint_handler)
-    print("""   ______  __                       _        __                
- .' ___  |[  |                     (_)      |  ]               
-/ .'   \_| | |--.   ,--.   _ .--.  __   .--.| |  .--.   .--.   
-| |        | .-. | `'_\ : [ `/'`\][  |/ /'`\\' |/ .'`\ \( (`\]  
-\ `.___.'\ | | | | // | |, | |     | || \__/  || \__. | `'.'.  
- `.____ .'[___]|__]\\'-;__/[___]   [___]'.__.;__]'.__.' [\__) ) 
-                                                               """)
-    print("=== Charidos DoS program ver 1.0 ===")
+    print("=== damndaniel DoS program ver 1.0 ===")
     target = input("[!] Enter Target > ")
     threads = input("[!] How many thread? (eg. 500) > ")
     print("[!] Program is starting in 5 seconds.")
